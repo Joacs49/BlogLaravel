@@ -2,13 +2,23 @@
 
 namespace App\Services;
 
+use App\Models\Post;
+
 class PostService
 {
-    /**
-     * Create a new class instance.
-     */
-    public function __construct()
+    public function store(array $data)
     {
-        //
+        return Post::create($data);
+    }
+
+    public function update(array $data, Post $post)
+    {
+        $post->update($data);
+        return $post;
+    }
+
+    public function destroy(Post $post)
+    {
+        $post->delete();
     }
 }

@@ -4,35 +4,54 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use \App\Services\PostService;
 
 class PostController extends Controller
 {
+    protected $postService;
+
+    public function __construct(PostService $postService)
+    {
+        $this->postService = $postService;
+    }
+
     /**
-     * Display a listing of the resource.
+     * Muestra todos los Post.
      */
     public function index()
     {
-        //
+        return view('blog.blogList');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el fomulario para crear Post.
      */
     public function create()
     {
-        //
+        return view('blog.blogCreate');
+    }
+
+    public function createAccount()
+    {
+        return view('blog.blogAccount');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Guarda el post en la db.
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $this->postService->store($request->all());
+
+            return redirect()->route('posts.index')->with('success', 'Post creado exitosamente.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error al crear el post: ' . $e->getMessage());
+        }
     }
 
     /**
-     * Display the specified resource.
+     * Muestra solo un Post.
      */
     public function show(Post $post)
     {
@@ -40,7 +59,7 @@ class PostController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario para editar un Post.
      */
     public function edit(Post $post)
     {
@@ -48,18 +67,30 @@ class PostController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza el Post.
      */
     public function update(Request $request, Post $post)
     {
-        //
+        try {
+            $this->postService->update($request->all(), $post);
+
+            return redirect()->route('posts.index')->with('success', 'Post actualizado exitosamente.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error al actualizar el post: ' . $e->getMessage());
+        }
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina el Post.
      */
     public function destroy(Post $post)
     {
-        //
+        try {
+            $this->postService->destroy($post);
+
+            return redirect()->route('posts.index')->with('success', 'Post eliminado exitosamente.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error al eliminar el post: ' . $e->getMessage());
+        }
     }
 }
