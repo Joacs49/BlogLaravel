@@ -24,6 +24,18 @@ services:
     networks:
       - laravel
   
+  node:
+    image: node:20
+    container_name: laravel_node
+    working_dir: /var/www
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - "5173:5173"
+    volumes:
+      - ../:/var/www
+    networks:
+      - laravel
+      
   db:
     image: mysql:8.0
     container_name: laravel_db
