@@ -53,6 +53,8 @@
             <x-blog.post-user category="React" state="Publicado" date="14/09/2025"
                 title="Entendiendo React Hooks: useState y useEffect" />
             <x-blog.post-user category="React" state="Publicado" date="14/09/2025" title="Otro Post sobre React" />
+
+            
         </div>
 
         <div id="section-comentarios" class="w-full flex flex-col justify-center items-center hidden">
@@ -61,7 +63,9 @@
             </div>
 
             <x-blog.comments title="El futuro del desarrollo frontend: Tendencias 2024" date="15/09/2025"
-                comment="Excelente artículo sobre Next.js 15. Me parece muy interesante la implementación de Server Components por defecto." />
+                comment="Excelente artículo sobre Next.js 15. Me parece muy interesante la implementación de Server Components por defecto." 
+                likes="23"
+                />
         </div>
     </section>
 

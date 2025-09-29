@@ -8,4 +8,6 @@
     <div>
         <h3>{{ $title }}</h3>
     </div>
+
+    <x-blog.interactions-account views="1500" likes="300" comments="45" />
 </div>

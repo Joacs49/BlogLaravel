@@ -11,12 +11,14 @@ class comments extends Component
     public $title;
     public $date;
     public $comment;
+    public $likes;
 
-    public function __construct($title, $date, $comment)
+    public function __construct($title, $date, $comment, $likes)
     {
         $this->title = $title;
         $this->date = $date;
         $this->comment = $comment;
+        $this->likes = $likes;
     }
 
     public function render(): View|Closure|string

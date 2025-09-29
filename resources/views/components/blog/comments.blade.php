@@ -7,4 +7,8 @@
     <div>
         <h3>{{ $comment }}</h3>
     </div>
+
+    <div class="flex flex-row justify-start gap-3 mt-2">
+        <img src="" alt="" class="w-6 h-6 rounded-full"><p>{{ $likes }}</p>
+    </div>
 </div>
