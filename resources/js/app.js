@@ -1,4 +1,5 @@
 import './bootstrap';
+import './posts-comments.js';
 
 import Alpine from 'alpinejs';
 
