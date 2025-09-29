@@ -1,15 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex flex-col justify-center items-center p-8">
-        <h1 class="text-2xl font-bold mb-4">Bienvenido a MiniBlog</h1>
-        <p>Un espacio para compartir ideas, conocimientos y experiencias sobre desarrollo web y tecnología moderna.</p>
-    </div>
+    <section class="w-full max-w-md mx-auto flex flex-col justify-center items-center text-sm p-8">
+        <div class="flex flex-col justify-center">
+            <h1 class="text-2xl font-bold mb-4 text-center">Bienvenido a MiniBlog</h1>
+            <p class="text-justify">
+                Un espacio para compartir ideas, conocimientos y experiencias sobre
+                desarrollo web y tecnología moderna.
+            </p>
+        </div>
+    </section>
 
-    <section class="flex flex-col justify-center items-center p-8 mb-20">
+    <section class="w-full max-w-md mx-auto flex flex-col justify-center items-center text-sm px-8 mb-8">
         <h2 class="mb-4">Posts Destacados</h2>
 
-        <div class="flex gap-10">
+        <div class="grid grid-cols-1 gap-5">
             <x-blog.post class="w-1/3" />
             <x-blog.post class="w-1/3" />
             <x-blog.post class="w-1/3" />
@@ -18,25 +23,26 @@
     </section>
 
     <div class="w-2/3 border mx-auto"></div>
-    <section class="p-8 flex flex-row justify-center items-center gap-20">
+
+    <section class="grid grid-cols-2 text-sm gap-4 my-8">
         <div class="flex flex-col items-center mx-4">
             <p>150+</p>
-            <p>Posts Publicados</p>
+            <p class="text-xs">Posts Publicados</p>
         </div>
 
         <div class="flex flex-col items-center mx-4">
             <p>50+</p>
-            <p>Autores Activos</p>
+            <p class="text-xs">Autores Activos</p>
         </div>
 
         <div class="flex flex-col items-center mx-4">
             <p>1.2K+</p>
-            <p>Lectores Mensuales</p>
+            <p class="text-xs">Lectores Mensuales</p>
         </div>
 
         <div class="flex flex-col items-center mx-4">
             <p>500+</p>
-            <p>Comentarios</p>
+            <p class="text-xs">Comentarios</p>
         </div>
     </section>
 

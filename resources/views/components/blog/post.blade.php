@@ -21,9 +21,5 @@
         <p>Web Development</p>
     </div>
 
-    <div class="flex flex-row gap-4 mb-4">
-        <p>Interacciones</p>
-        <p>Interacciones</p>
-        <p>Interacciones</p>
-    </div>
+    <x-blog.interactions-account views="1500" likes="300" comments="45" />
 </section>
