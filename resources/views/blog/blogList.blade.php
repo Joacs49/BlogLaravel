@@ -7,7 +7,7 @@
 </div>
 
 <div class="pl-8 mb-4 mr-8">
-    <input type="text" name="search" id="search" placeholder="Buscar..." class="border p-2 rounded w-full md:w-1/3 lg:w-2/3">
+    <input type="text" name="search" id="search" placeholder="Buscar..." class="border p-2 rounded w-full max-w-lg">
 </div>
 
 <section class="pt-8 px-8" x-data="pagination()">
