@@ -15,7 +15,7 @@
         <p class="text-xs">Descubre las últimas funcionalidades de Next.js 15 y cómo pueden mejorar tu flujo de desarrollo web moderno.</p>
     </div>
 
-    <div class="flex flex-row flex-wrap justify-evenly my-4">
+    <div class="flex flex-row flex-wrap justify-evenly text-xs my-4">
         <p>Next.js</p>
         <p>React</p>
         <p>Web Development</p>
