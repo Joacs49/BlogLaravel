@@ -25,5 +25,6 @@ Route::controller(PostController::class)->prefix('posts')->group(function () {
     Route::get('/create', 'create')->name('blog.blogCreate');
     Route::get('/list', 'index')->name('blog.blogList');
     Route::get('/account', 'createAccount')->name('blog.blogAccount');
+    Route::post('/blog', 'store')->name('posts.store');
 });
 
