@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="max-w-7xl flex flex-col justify-center items-center">
+    <section>
         
             <div class="w-full flex flex-col justify-start items-start p-8">
                 <h1 class="text-xl font-bold mb-4">Escribir Nuevo Post</h1>
@@ -11,7 +11,7 @@
             <form action="{{ route('posts.store') }}" method="POST">
             @csrf
 
-            <section class="w-10/12 p-4 flex flex-col text-sm gap-6 border rounded-lg mb-6 mx-8">
+            <section class="p-4 flex flex-col text-sm gap-6 border rounded-lg mb-6 mx-8">
 
                 <div>
                     <img src="" alt="">
@@ -51,7 +51,7 @@
             </section>
 
 
-            <section class="w-10/12 p-4 flex flex-col gap-6 mb-4 border rounded-lg mx-8">
+            <section class="p-4 flex flex-col gap-6 mb-4 border rounded-lg mx-8">
                 <div>
                     <h3 class="text-sm">Contenido del Post</h3>
                 </div>
