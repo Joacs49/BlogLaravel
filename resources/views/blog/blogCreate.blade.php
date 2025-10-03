@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="w-full flex flex-col justify-start items-start p-8">
+    <div class="max-w-3xl w-full flex flex-col justify-start items-start p-8">
         <h1 class="text-xl font-bold mb-4">Escribir Nuevo Post</h1>
         <h2 class="text-sm">Comparte tus conocimientos con la comunidad</h2>
     </div>
@@ -10,7 +10,7 @@
     <form action="{{ route('posts.store') }}" method="POST">
         @csrf
 
-        <section class="p-4 flex flex-col text-sm gap-6 border rounded-lg mb-6 mx-8">
+        <section class="max-w-3xl flex flex-col text-sm gap-6 border rounded-lg mb-6 mx-8 p-4">
 
             <div>
                 <img src="" alt="">
@@ -50,7 +50,7 @@
         </section>
 
 
-        <section class="p-4 flex flex-col gap-6 mb-4 border rounded-lg mx-8">
+        <section class="max-w-3xl flex flex-col gap-6 mb-4 border rounded-lg mx-8 p-4">
             <div>
                 <h3 class="text-sm">Contenido del Post</h3>
             </div>
