@@ -1,7 +1,7 @@
 export function pagination() {
     return {
         currentPage: 1,
-        perPage: 9,
+        perPage: 6,
         posts: [
             { id: 1, title: "Post 1", excerpt: "Resumen del post 1" },
             { id: 2, title: "Post 2", excerpt: "Resumen del post 2" },

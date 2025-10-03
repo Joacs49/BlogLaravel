@@ -19,7 +19,7 @@
 <body>
     <div class="flex min-h-screen lg:overflow-hidden">
         <!-- Sidebar -->
-        <aside class="hidden lg:block w-64 bg-gray-100">
+        <aside class="hidden lg:block w-48 bg-gray-100">
             <x-blog.blog />
         </aside>
         <!-- Main content -->

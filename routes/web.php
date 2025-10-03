@@ -18,8 +18,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
-
 Route::controller(PostController::class)->prefix('posts')->group(function () {
     Route::get('/', 'index')->name('posts.index');
     Route::get('/create', 'create')->name('blog.blogCreate');
@@ -28,3 +26,4 @@ Route::controller(PostController::class)->prefix('posts')->group(function () {
     Route::post('/blog', 'store')->name('posts.store');
 });
 
+require __DIR__.'/auth.php';
