@@ -1,4 +1,4 @@
-FROM php:8.3-fpm-alpine
+FROM php:8.3-fpm-alpine@sha256:latest
 
 # Instalar dependencias necesarias
 RUN apk add --no-cache \
