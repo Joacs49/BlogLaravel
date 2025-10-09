@@ -15,7 +15,12 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
                 <template x-for="post in paginatedPosts()" :key="post.id">
-                    <x-blog.post class="w-full" />
+                    <x-blog.publication 
+                        author="María García" 
+                        title="Introducción a React" 
+                        date="10 de Octubre, 2023"
+                        description="Aprende los conceptos básicos de React y cómo crear aplicaciones web interactivas."
+                        :tags="['React', 'JavaScript', 'Frontend']" />
                 </template>
             </div>
 
